@@ -1,0 +1,22 @@
+
+Função responsável por retornar um pedaço da string inteira
+
+EX: select campo, SUBSTR(campoo, 1, LENGTH(campoo) - 1) || '1' "Novo valor" from tabela;
+
+Explicação da sintaxe:
+select SUBSTR(
+    <campo string>, 
+    <inicio integer (começa em 1 e não em 0)>, 
+    <quantidade de casas depois do inicio integer(pode ser vazio, ai pega até o final da palavra)>) 
+from dual;
+
+
+Outros exemplos:
+    select SUBSTR('123456789', 1, 3) from dual;
+    resultado: 123
+
+    select SUBSTR('123456789', 4) from dual;
+    resultado: 456789
+
+    select SUBSTR('123456789', 5, 4) from dual;
+    resultado: 5678
